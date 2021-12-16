@@ -1,0 +1,47 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+html, body{
+  width: 100%;
+  height: 100%;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+/* *************** table *************** */
+.el-table .el-table__header-wrapper .el-table__header,
+.el-table .el-table__fixed-header-wrapper .el-table__header{
+  tr th{
+    background-color: #e4ebec;
+    color: rgb(50, 69, 88);
+    font-weight: bold;
+  }
+}
+.el-table td {
+  padding: 7px 0;
+  .table-cell-link{
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 8px;
+    font-weight: bold;
+    color: $color-primary;
+    &:hover{
+      color: $color-primary-light;
+    }
+  }
+  .table-cell-more{
+    cursor: pointer;
+    width: 100%;
+    color: $color-primary;
+    @include ellipsis();
+  }
+}
+.el-table-column--selection .cell{
+  padding: 0 !important;
+}

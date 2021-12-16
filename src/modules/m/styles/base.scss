@@ -1,0 +1,83 @@
+html,
+body {
+  // background: $html-bgc;
+  // color: $color-text;
+}
+
+#adminApp {
+  width: 100%;
+  min-width: 1000px;
+  height: 100%;
+}
+
+/* 滚动条凹槽的颜色，还可以设置边框属性 */
+// *::-webkit-scrollbar-track-piece {
+//   background-color:#f8f8f8;
+//   -webkit-border-radius: 2em;
+//   -moz-border-radius: 2em;
+//   border-radius: 2em;
+// }
+// /*滚动条*/
+// *::-webkit-scrollbar {
+//   width: 0;
+// }
+
+// 布局
+.layout {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #fff;
+
+  &-menu {
+    width: 200px;
+    height: 100%;
+  }
+
+  &-right {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow: hidden;
+
+    .layout-header {
+      z-index: 1;
+      width: 100%;
+      min-width: 650px;
+      height: 48px;
+      background-color: #fff;
+      // box-shadow: 0 1px 2px 0 rgba(9,18,26,0.06), 0 4px 8px 0 rgba(39,56,73,0.08);
+      box-shadow: 0 2px 12px 0 rgba(31, 22, 67, .2);
+    }
+
+    .layout-content {
+      box-sizing: border-box;
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+
+      .component-flex-full {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      .component-flex-page {
+        flex: 1;
+        padding: 10px 20px;
+        margin: 0 20px;
+        overflow: auto;
+        background: #fff;
+      }
+
+      .component-flex-footer {
+        padding: 10px 0;
+        padding-left: 120px; // 可根据每个页面的label宽度重写
+        margin: 0 20px;
+        background: #f5f7fa;
+      }
+    }
+  }
+}
