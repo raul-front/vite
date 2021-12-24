@@ -25,4 +25,13 @@ export default defineConfig({
       },
     },
   },
+  server: {
+    proxy: {
+      '/devApi': {
+        target: 'http://localhost:7001',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/devApi/, '/'),
+      },
+    },
+  },
 })

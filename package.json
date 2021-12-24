@@ -3,8 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build:test": "vite build --mode test",
+    "build:pre": "vite build --mode pre",
+    "build:release": "vite build",
+    "preview": "vite preview",
+    "fix": "eslint --fix src"
   },
   "dependencies": {
     "vue": "^3.2.25"
