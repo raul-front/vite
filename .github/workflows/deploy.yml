@@ -5,7 +5,7 @@ name: Deploy Release CI
 
 on:
   push:
-    branches: [ release ]
+    branches: [ pages ]
 
 jobs:
   build:
@@ -32,3 +32,6 @@ jobs:
 
     - name: 'Step 5: Build code'
       run: pnpm build:release
+
+    - name: Deploy To Qiniu
+      run: make deploy AK=${{ secrets.QINIU_AK }} SK=${{ secrets.QINIU_SK }}
