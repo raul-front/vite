@@ -3,17 +3,10 @@ import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 
 export default ({ mode }) => {
-  const isDev = mode === 'development'
-  const projectName = 'vite'
-
+  // const isDev = mode === 'development'
   return defineConfig({
     plugins: [vue()],
-    base: isDev ? '/' : `/${projectName}/`,
-
-    // 为了打包后能访问到静态图片，将public设置为echarts
-    publicDir: projectName,
     build: {
-      outDir: `dist/${projectName}`,
       rollupOptions: {
         input: {
           pc: resolve(__dirname, 'index.html'),

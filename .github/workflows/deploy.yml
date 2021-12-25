@@ -33,5 +33,5 @@ jobs:
     - name: 'Step 5: Build code'
       run: pnpm build:release
 
-    - name: Deploy To Qiniu
-      run: make deploy AK=${{ secrets.QINIU_AK }} SK=${{ secrets.QINIU_SK }}
+    # - name: Deploy To Qiniu
+    #   run: make deploy AK=${{ secrets.QINIU_AK }} SK=${{ secrets.QINIU_SK }}

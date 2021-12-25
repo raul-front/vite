@@ -1,8 +1,9 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router'
 import Home from 'm/views/home/index.vue'
 
+const env = import.meta.env.MODE
 const router = createRouter({
-  history: createWebHashHistory('/vite/m'),
+  history: env === 'development' ? createWebHashHistory() : createWebHistory('/m'),
   routes: [
     {
       path: '',

@@ -37,11 +37,11 @@ const common = {
 }
 
 let config = {}
-if (ENV.mode === 'production') {
+if (ENV.MODE === 'production') {
   config = Object.assign({}, common, production)
-} else if (ENV.mode === 'pre') {
+} else if (ENV.MODE === 'pre') {
   config = Object.assign({}, common, pre)
-} else if (ENV.mode === 'test') {
+} else if (ENV.MODE === 'test') {
   config = Object.assign({}, common, test)
 } else {
   config = Object.assign({}, common, development)
