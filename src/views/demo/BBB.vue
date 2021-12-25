@@ -1,10 +1,10 @@
 <script setup="setup">
 import { ref } from 'vue'
-import useCounterStore from '@/store/useCounterStore'
-import useUserMoney from '@/store/useUserMoney'
+import useCounterStore from '@/store/counter'
+import useUserMoney from '@/store/userMoney'
 
-const counter = useCounterStore()
-const userMoney = useUserMoney()
+const counterStore = useCounterStore()
+const userMoneyStore = useUserMoney()
 const n = ref(1)
 </script>
 
@@ -13,17 +13,17 @@ const n = ref(1)
   <div>
     <div>
         B:
-        {{ counter.number }}
+        {{ counterStore.number }}
     </div>
     <div>
-        double: {{ counter.doubleNumber }}
+        double: {{ counterStore.doubleNumber }}
     </div>
     <div>
         <input v-model.number="n"/>
-        value: {{ counter.addAnyNumber(n) }}
+        value: {{ counterStore.addAnyNumber(n) }}
     </div>
     <div>
-        user money: {{ userMoney.total }}
+        user money: {{ userMoneyStore.total }}
     </div>
   </div>
 </template>

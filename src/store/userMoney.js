@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import useCounterStore from './useCounterStore'
+import useCounterStore from './counter'
 
 const useUserMoney = defineStore({
   id: 'user',

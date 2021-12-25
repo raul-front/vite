@@ -1,19 +1,19 @@
 <script setup="setup">
-import useCounterStore from '@/store/useCounterStore'
+import useCounterStore from '@/store/counter'
 
-const counter = useCounterStore()
+const counterStore = useCounterStore()
 const addOne = () => {
-  counter.$patch({
-    number: counter.number + 1,
+  counterStore.$patch({
+    number: counterStore.number + 1,
   })
 }
-const { addMany, addAsyncMany, addAsyncWithAwait } = counter
+const { addMany, addAsyncMany, addAsyncWithAwait } = counterStore
 </script>
 
 <template>
   <div>
     A:
-    {{ counter.number }}
+    {{ counterStore.number }}
 
     <button @click="addOne">+1</button>
     <button @click="addMany">add many</button>
