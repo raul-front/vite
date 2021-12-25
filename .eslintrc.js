@@ -9,7 +9,7 @@ module.exports = {
     'standard',
   ],
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 2021,
     sourceType: 'module',
   },
   plugins: [
@@ -19,6 +19,6 @@ module.exports = {
     'comma-dangle': ['error', 'always-multiline'],
   },
   globals: {
-    defineProps: true,
+    defineProps: 'readonly',
   },
 }

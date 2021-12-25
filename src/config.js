@@ -3,7 +3,6 @@
  * @Author: pujianguo
  * @Date: 2021-12-24 23:12:59
  */
-// eslint-disable-next-line
 const ENV = import.meta.env
 
 // development version
