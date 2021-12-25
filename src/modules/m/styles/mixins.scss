@@ -1,0 +1,10 @@
+@import "./variables.scss";
+
+@mixin flex-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10px;
+  /* stylelint-disable-next-line unit-case */
+  font-size: 12PX;
+}

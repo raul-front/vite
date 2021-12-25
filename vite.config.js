@@ -5,6 +5,14 @@ import { resolve } from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
+  build: {
+    rollupOptions: {
+      input: {
+        pc: resolve(__dirname, 'index.html'),
+        m: resolve(__dirname, 'm.html'),
+      },
+    },
+  },
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
@@ -13,6 +21,8 @@ export default defineConfig({
       components: resolve(__dirname, 'src/components'),
       utils: resolve(__dirname, 'src/utils'),
       api: resolve(__dirname, 'src/api'),
+      pc: resolve(__dirname, 'src/modules/pc'),
+      m: resolve(__dirname, 'src/modules/m'),
     },
   },
   css: {
