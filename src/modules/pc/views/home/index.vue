@@ -3,7 +3,7 @@
     pc-home-page
     <!-- <button @click="click">click</button> -->
     <router-link :to="{name: 'Demo_Pinia'}">link</router-link>
-    <a href="/m">aaaa</a>
+    <a href="/m.html">aaaa</a>
   </div>
 </template>
 <script setup>

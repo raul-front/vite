@@ -1,11 +1,23 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
+import styleImport from 'vite-plugin-style-import'
 
 export default ({ mode }) => {
   // const isDev = mode === 'development'
   return defineConfig({
-    plugins: [vue()],
+    plugins: [
+      vue(),
+      styleImport({
+        libs: [
+          {
+            libraryName: 'vant',
+            esModule: true,
+            resolveStyle: (name) => `vant/es/${name}/style/index`,
+          },
+        ],
+      }),
+    ],
     build: {
       rollupOptions: {
         input: {
