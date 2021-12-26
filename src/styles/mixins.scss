@@ -1,10 +1,13 @@
-@import "./variables.scss";
+// @include "variables.scss";
+@use "styles/variables.scss" as *;
 
-@mixin flex-center() {
+@mixin flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 10px;
   /* stylelint-disable-next-line unit-case */
   font-size: 12PX;
+
+  // color: var(--el-color-primary);
+  color: $color-primary-1;
 }
