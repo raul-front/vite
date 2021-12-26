@@ -1,5 +1,4 @@
 const path = require('path')
-const isExclude = path.join('src', 'modules', 'pc') // linux系统与windows系统文件夹连接符不同，需要用生成
 module.exports = {
   plugins: {
     'postcss-pxtorem': {
@@ -14,7 +13,8 @@ module.exports = {
       replace: true,
       mediaQuery: false,
       minPixelValue: 2,
-      exclude: isExclude, // 不转换的目录，对于多页面项目，这里区分一下
+      // 排除pc页面
+      exclude: new RegExp(`element-plus|${path.join('src', 'modules', 'pc')}`, 'i'),
     },
   },
 }

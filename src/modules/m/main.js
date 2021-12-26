@@ -1,10 +1,11 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import vant from './plugins/vant'
-import 'amfe-flexible'
 import { createPinia } from 'pinia'
 import { initCounter } from '@/store/counter'
+import vant from './plugins/vant'
+import 'amfe-flexible'
+import './styles/index.scss'
 
 const app = createApp(App)
 app.use(router)
